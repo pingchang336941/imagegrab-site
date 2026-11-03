@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>图提取 ImageGrab — 电商图片批量下载（360 浏览器扩展）</title>
+<meta name="description" content="图提取 ImageGrab：淘宝、天猫、京东、拼多多商品详情页一键提取全部图片，自动过滤广告图，统一转 PNG，一键打包 ZIP。本地处理，不上传任何数据。">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Microsoft YaHei","PingFang SC",system-ui,sans-serif;color:#1f2328;background:#f6f7f9;line-height:1.75;-webkit-font-smoothing:antialiased}
+.wrap{max-width:920px;margin:0 auto;padding:0 20px}
+header{background:linear-gradient(135deg,#1f6feb,#3b8cff);color:#fff;padding:64px 0 56px}
+header h1{font-size:34px;letter-spacing:.5px}
+header p{margin-top:14px;font-size:17px;opacity:.94;max-width:620px}
+.tag{display:inline-block;margin-top:22px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);padding:6px 14px;border-radius:999px;font-size:13px}
+main{padding:44px 0 20px}
+section{background:#fff;border:1px solid #e6e8eb;border-radius:12px;padding:28px 30px;margin-bottom:20px}
+h2{font-size:20px;margin-bottom:16px;padding-left:12px;border-left:4px solid #1f6feb}
+h3{font-size:16px;margin:20px 0 8px}
+p,li{font-size:15px;color:#333a41}
+ul,ol{padding-left:22px}
+li{margin:6px 0}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:6px}
+@media(max-width:680px){.grid{grid-template-columns:1fr}header h1{font-size:26px}}
+.card{border:1px solid #e6e8eb;border-radius:10px;padding:16px 18px;background:#fbfcfd}
+.card b{display:block;margin-bottom:4px;color:#1f2328}
+.card span{font-size:14px;color:#5a626b}
+table{width:100%;border-collapse:collapse;margin-top:10px;font-size:14px}
+th,td{border:1px solid #e6e8eb;padding:10px 12px;text-align:left}
+th{background:#f2f5f9;font-weight:600}
+.note{background:#fff8e6;border:1px solid #f2d68a;border-radius:10px;padding:14px 18px;font-size:14px;color:#6b5200}
+footer{text-align:center;padding:34px 20px 60px;color:#7a828b;font-size:13px}
+a{color:#1f6feb}
+code{background:#f2f5f9;border:1px solid #e6e8eb;border-radius:4px;padding:1px 6px;font-size:13px}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <h1>图提取 ImageGrab</h1>
+    <p>电商详情页图片批量下载工具：点一下，整页商品图全抓出来，勾选后打包成一个 ZIP。做上新、改图、发美工，不用再一张张右键另存。</p>
+    <div class="tag">360 浏览器扩展 ｜ Manifest V3 ｜ 本地处理，不上传任何数据</div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section>
+    <h2>它是干什么的</h2>
+    <p>做电商上新最费时间的不是修图，是把图一张张弄下来。本扩展在商品详情页右下角加一个「获取图片」按钮：点一下，整页图片全部抓出来，集中预览 → 勾选 → 打包成一个 ZIP。一个商品几十张图，30 秒带走。</p>
+    <div class="grid" style="margin-top:18px">
+      <div class="card"><b>一键提取</b><span>淘宝、天猫、京东、拼多多商品详情页，点一下抓整页图片。</span></div>
+      <div class="card"><b>自动过滤</b><span>推荐位、买家秀、横幅、二维码、小图标自动排除，默认只留商品图。</span></div>
+      <div class="card"><b>统一转 PNG</b><span>JPG / WebP / GIF 进来，PNG 出去，保留原分辨率与透明通道。</span></div>
+      <div class="card"><b>打包 ZIP</b><span>勾选后打成一个压缩包，文件名自动按顺序编号。</span></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>怎么用</h2>
+    <ol>
+      <li>安装后打开商品详情页（淘宝 / 天猫 / 京东 / 拼多多）。</li>
+      <li>点页面右下角「获取图片」按钮；其他网站可点浏览器工具栏的扩展图标手动提取当前页面。</li>
+      <li>在画廊里预览、勾选需要的图片，点「下载选中」逐张保存，或点「打包 ZIP」一个压缩包带走。</li>
+    </ol>
+  </section>
+
+  <section>
+    <h2>收费说明（明示，无隐藏扣费）</h2>
+    <table>
+      <tr><th style="width:46%">功能</th><th>价格</th></tr>
+      <tr><td>单张 / 逐张下载 PNG</td><td>不限次数，永久免费</td></tr>
+      <tr><td>打包 ZIP</td><td>免费 5 次，之后输入授权卡密即可无限打包</td></tr>
+      <tr><td>授权卡密</td><td>一次性买断，不绑设备、不按年收费；换电脑重新输入同一张卡密即可</td></tr>
+    </table>
+    <p style="margin-top:14px">本扩展不内嵌任何支付、不自动扣费、不订阅自动续费。授权只在本地用签名校验，不联网核销。</p>
+  </section>
+
+  <section>
+    <h2>隐私</h2>
+    <ul>
+      <li>全部处理在本机浏览器完成：不上传图片、不上传浏览记录、无统计埋点、无广告、不加载远程脚本。</li>
+      <li>只申请必要权限：当前标签页（activeTab / scripting）、downloads、storage，且只对上述电商站点及其图片 CDN 生效。</li>
+      <li>卸载扩展即删除本地计数与授权状态；也可以在浏览器扩展管理页清除数据。</li>
+    </ul>
+    <p style="margin-top:12px">完整条款见 <a href="privacy.html">《隐私政策》</a>。</p>
+  </section>
+
+  <section>
+    <h2>联系与支持</h2>
+    <p>开发者：李世超 ｜ 联系邮箱：<a href="mailto:lichamaomail@163.com">lichamaomail@163.com</a></p>
+    <p style="margin-top:10px;font-size:14px;color:#5a626b">安装失败、卡密激活不了、提取不到图，都可以发邮件说明「浏览器版本 + 页面链接 + 卡密编号」，我们会回复处理。</p>
+  </section>
+
+  <section>
+    <div class="note">温馨提示：本工具仅用于处理你自己店铺或已获授权的图片素材。需要登录或验证码才能查看的图片无法获取。文中提及的平台名称仅用于说明兼容范围，相关商标归各自权利人所有。</div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">图提取 ImageGrab ｜ 版本 1.2.0 ｜ <a href="privacy.html">隐私政策</a></div>
+</footer>
+</body>
+</html>
